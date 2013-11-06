@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411460A3182ABCFE0084F228 /* LabelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 411460A2182ABCFE0084F228 /* LabelCollectionViewCell.m */; };
+		411460A5182AC2B90084F228 /* LabelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 411460A4182AC2B90084F228 /* LabelCollectionViewCell.xib */; };
 		41534C3B18270DE500B5DE62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41534C3A18270DE500B5DE62 /* Foundation.framework */; };
 		41534C3D18270DE500B5DE62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41534C3C18270DE500B5DE62 /* CoreGraphics.framework */; };
 		41534C3F18270DE500B5DE62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41534C3E18270DE500B5DE62 /* UIKit.framework */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		411460A1182ABCFE0084F228 /* LabelCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelCollectionViewCell.h; sourceTree = "<group>"; };
+		411460A2182ABCFE0084F228 /* LabelCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelCollectionViewCell.m; sourceTree = "<group>"; };
+		411460A4182AC2B90084F228 /* LabelCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelCollectionViewCell.xib; sourceTree = "<group>"; };
 		41534C3718270DE500B5DE62 /* StackPanelLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackPanelLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41534C3A18270DE500B5DE62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		41534C3C18270DE500B5DE62 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -121,6 +126,9 @@
 				41534C7018270E2500B5DE62 /* StackPanelViewController.m */,
 				41534C7218270F7200B5DE62 /* TestViewController.h */,
 				41534C7318270F7200B5DE62 /* TestViewController.m */,
+				411460A1182ABCFE0084F228 /* LabelCollectionViewCell.h */,
+				411460A2182ABCFE0084F228 /* LabelCollectionViewCell.m */,
+				411460A4182AC2B90084F228 /* LabelCollectionViewCell.xib */,
 				41534C4C18270DE500B5DE62 /* Main.storyboard */,
 				41534C5218270DE500B5DE62 /* Images.xcassets */,
 				41534C4118270DE500B5DE62 /* Supporting Files */,
@@ -237,6 +245,7 @@
 				41534C5318270DE500B5DE62 /* Images.xcassets in Resources */,
 				41534C4518270DE500B5DE62 /* InfoPlist.strings in Resources */,
 				41534C4E18270DE500B5DE62 /* Main.storyboard in Resources */,
+				411460A5182AC2B90084F228 /* LabelCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41534C7118270E2500B5DE62 /* StackPanelViewController.m in Sources */,
+				411460A3182ABCFE0084F228 /* LabelCollectionViewCell.m in Sources */,
 				41534C4B18270DE500B5DE62 /* FFCGAppDelegate.m in Sources */,
 				41534C7418270F7200B5DE62 /* TestViewController.m in Sources */,
 				41534C4718270DE500B5DE62 /* main.m in Sources */,
@@ -467,6 +477,7 @@
 				41534C6B18270DE500B5DE62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		41534C6C18270DE500B5DE62 /* Build configuration list for PBXNativeTarget "StackPanelLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +486,7 @@
 				41534C6E18270DE500B5DE62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

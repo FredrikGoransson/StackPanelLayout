@@ -10,6 +10,8 @@
 
 @interface StackPanelViewController ()
 
+- (void)generateConstraints;
+
 @end
 
 @implementation StackPanelViewController
@@ -28,6 +30,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [self generateConstraints];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)generateConstraints
+{
     if( self.scrollView == nil)
     {
         [NSException raise:@"StackPanelViewController is not connected to a ScrollView"
@@ -113,12 +126,6 @@
     }
     [self.scrollView updateConstraints];
     [self.view updateConstraints];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (float)heightForView:(UIView*)view

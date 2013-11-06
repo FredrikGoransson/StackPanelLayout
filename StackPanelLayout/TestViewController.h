@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "StackPanelViewController.h"
+#import "LabelCollectionViewCell.h"
 
-@interface TestViewController : StackPanelViewController
+@interface TestViewController : StackPanelViewController<UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
 - (IBAction)expandCollapseTapped:(id)sender;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+- (IBAction)addFiveItemsTapped:(id)sender;
 
 @end
