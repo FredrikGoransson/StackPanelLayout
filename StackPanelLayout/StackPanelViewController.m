@@ -59,12 +59,32 @@
                                options:NSLayoutFormatDirectionLeadingToTrailing
                                metrics:nil
                                views:NSDictionaryOfVariableBindings(scrollView)]];
+    float viewHeight = self.view.frame.size.height;
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"V:|-(0)-[scrollView(>=480)]-(0)-|"
+                               constraintsWithVisualFormat:@"V:|-(0)-[scrollView(height)]-(0)-|"
                                options:NSLayoutFormatDirectionLeadingToTrailing
-                               metrics:nil
+                               metrics:@{@"height": [NSNumber numberWithFloat:viewHeight]}
                                views:NSDictionaryOfVariableBindings(scrollView)]];
     
+    /*
+    [self.view addConstraint:[NSLayoutConstraint
+                              constraintWithItem:self.view
+                              attribute:NSLayoutAttributeHeight
+                              relatedBy:NSLayoutRelationEqual
+                              toItem:self.scrollView
+                              attribute:NSLayoutAttributeHeight
+                              multiplier:1
+                              constant:0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint
+                              constraintWithItem:self.view
+                              attribute:NSLayoutAttributeWidth
+                              relatedBy:NSLayoutRelationEqual
+                              toItem:self.scrollView
+                              attribute:NSLayoutAttributeWidth
+                              multiplier:1
+                              constant:0]];
+     */
     
     NSArray *filteredSubViews = [self.scrollView.subviews filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id object, NSDictionary *bindings) {
         return ![((UIView*)object) isKindOfClass:[UIImageView class]];
@@ -126,6 +146,12 @@
     }
     [self.scrollView updateConstraints];
     [self.view updateConstraints];
+    
+    NSLog(@"View id      : %p (%f)", self.view, viewHeight);
+    NSLog(@"ScrollView id: %p (%f)", self.scrollView, self.scrollView.frame.size.height);
+    for (NSLayoutConstraint *constraint in self.view.constraints) {
+        NSLog(@"%@", constraint);
+    }
 }
 
 - (float)heightForView:(UIView*)view
