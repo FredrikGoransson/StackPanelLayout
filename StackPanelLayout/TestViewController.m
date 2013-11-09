@@ -31,11 +31,7 @@
 - (void)viewDidLoad
 {
     
-    UINib *cellNib = [UINib nibWithNibName:@"LabelCollectionViewCell" bundle:nil];
-    [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:@"LabelCell"];
-    
     // get a cell as template for sizing
-    self.sizingCell = [[cellNib instantiateWithOwner:nil options:nil] objectAtIndex:0];
     self.padding = 20;
     nextItem = 10;
     loremIpsum = @"The dreams of yesterday are the hopes of today and the reality of tomorrow Here men from the planet Earth first set foot upon the Moon July 1969 AD We came in peace for all mankind";
@@ -79,19 +75,29 @@
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     LabelCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LabelCell" forIndexPath:indexPath];
-    
     cell.titleLabel.text = [self.items objectAtIndex:indexPath.row];
     return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 {
+    if( self.sizingCell == nil)
+    {
+        UINib *cellNib = [UINib nibWithNibName:@"LabelCollectionViewCell" bundle:nil];
+        [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:@"LabelCell"];
+        self.sizingCell = [[cellNib instantiateWithOwner:nil options:nil] objectAtIndex:0];
+    }
     LabelCollectionViewCell *cell = self.sizingCell;
     
     cell.titleLabel.text = [self.items objectAtIndex:indexPath.row];
     CGSize size =  [cell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     
     return size;
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(10, 15, 10, 15);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
