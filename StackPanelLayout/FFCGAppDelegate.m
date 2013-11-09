@@ -8,11 +8,32 @@
 
 #import "FFCGAppDelegate.h"
 
+@interface FFCGAppDelegate()
+
+@property (nonatomic,strong) MMDrawerController * drawerController;
+
+@end
+
 @implementation FFCGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UIViewController * centerViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"centerDrawerController"];
+    
+    UIViewController * rightSideDrawerViewController = [centerViewController.storyboard instantiateViewControllerWithIdentifier:@"rightDrawerController"];
+    
+    UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:centerViewController];
+    self.drawerController = [[MMDrawerController alloc]
+                                 initWithCenterViewController:navigationController
+                                 leftDrawerViewController:nil
+                                 rightDrawerViewController:rightSideDrawerViewController];
+        [self.drawerController setShowsShadow:NO];
+
+    [self.drawerController setMaximumRightDrawerWidth:280.0];
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    [self.window setRootViewController:self.drawerController];
+    
     return YES;
 }
 							

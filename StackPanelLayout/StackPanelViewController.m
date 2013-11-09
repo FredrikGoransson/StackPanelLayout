@@ -66,26 +66,6 @@
                                metrics:@{@"height": [NSNumber numberWithFloat:viewHeight]}
                                views:NSDictionaryOfVariableBindings(scrollView)]];
     
-    /*
-    [self.view addConstraint:[NSLayoutConstraint
-                              constraintWithItem:self.view
-                              attribute:NSLayoutAttributeHeight
-                              relatedBy:NSLayoutRelationEqual
-                              toItem:self.scrollView
-                              attribute:NSLayoutAttributeHeight
-                              multiplier:1
-                              constant:0]];
-    
-    [self.view addConstraint:[NSLayoutConstraint
-                              constraintWithItem:self.view
-                              attribute:NSLayoutAttributeWidth
-                              relatedBy:NSLayoutRelationEqual
-                              toItem:self.scrollView
-                              attribute:NSLayoutAttributeWidth
-                              multiplier:1
-                              constant:0]];
-     */
-    
     NSArray *filteredSubViews = [self.scrollView.subviews filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id object, NSDictionary *bindings) {
         return ![((UIView*)object) isKindOfClass:[UIImageView class]];
     }]];

@@ -7,6 +7,7 @@
 //
 
 #import "TestViewController.h"
+#import "UIViewController+MMDrawerController.h"
 
 @interface TestViewController ()
 {
@@ -124,4 +125,9 @@
     CGSize size = [self.collectionView.collectionViewLayout collectionViewContentSize];
     [self setHeight:size.height + 50 forView:self.collectionView.superview animated:YES];
 }
+
+- (IBAction)openDrawerTapped:(id)sender {
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideRight animated:YES completion:nil];
+}
+
 @end

@@ -24,6 +24,10 @@
 		41534C6618270DE500B5DE62 /* StackPanelLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41534C6518270DE500B5DE62 /* StackPanelLayoutTests.m */; };
 		41534C7118270E2500B5DE62 /* StackPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41534C7018270E2500B5DE62 /* StackPanelViewController.m */; };
 		41534C7418270F7200B5DE62 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41534C7318270F7200B5DE62 /* TestViewController.m */; };
+		41FCEF69182EE3E100D665A5 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FCEF61182EE3E100D665A5 /* MMDrawerBarButtonItem.m */; };
+		41FCEF6A182EE3E100D665A5 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FCEF64182EE3E100D665A5 /* MMDrawerController.m */; };
+		41FCEF6B182EE3E100D665A5 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FCEF66182EE3E100D665A5 /* MMDrawerVisualState.m */; };
+		41FCEF6C182EE3E100D665A5 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FCEF68182EE3E100D665A5 /* UIViewController+MMDrawerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,15 @@
 		41534C7018270E2500B5DE62 /* StackPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackPanelViewController.m; sourceTree = "<group>"; };
 		41534C7218270F7200B5DE62 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		41534C7318270F7200B5DE62 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		41FCEF60182EE3E100D665A5 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		41FCEF61182EE3E100D665A5 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		41FCEF62182EE3E100D665A5 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		41FCEF63182EE3E100D665A5 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		41FCEF64182EE3E100D665A5 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		41FCEF65182EE3E100D665A5 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		41FCEF66182EE3E100D665A5 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		41FCEF67182EE3E100D665A5 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		41FCEF68182EE3E100D665A5 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +133,7 @@
 		41534C4018270DE500B5DE62 /* StackPanelLayout */ = {
 			isa = PBXGroup;
 			children = (
+				41FCEF5F182EE3E100D665A5 /* MMDrawerController */,
 				41534C4918270DE500B5DE62 /* FFCGAppDelegate.h */,
 				41534C4A18270DE500B5DE62 /* FFCGAppDelegate.m */,
 				41534C6F18270E2500B5DE62 /* StackPanelViewController.h */,
@@ -163,6 +177,22 @@
 				41534C6218270DE500B5DE62 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41FCEF5F182EE3E100D665A5 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				41FCEF60182EE3E100D665A5 /* MMDrawerBarButtonItem.h */,
+				41FCEF61182EE3E100D665A5 /* MMDrawerBarButtonItem.m */,
+				41FCEF62182EE3E100D665A5 /* MMDrawerController+Subclass.h */,
+				41FCEF63182EE3E100D665A5 /* MMDrawerController.h */,
+				41FCEF64182EE3E100D665A5 /* MMDrawerController.m */,
+				41FCEF65182EE3E100D665A5 /* MMDrawerVisualState.h */,
+				41FCEF66182EE3E100D665A5 /* MMDrawerVisualState.m */,
+				41FCEF67182EE3E100D665A5 /* UIViewController+MMDrawerController.h */,
+				41FCEF68182EE3E100D665A5 /* UIViewController+MMDrawerController.m */,
+			);
+			path = MMDrawerController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +295,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				41534C7118270E2500B5DE62 /* StackPanelViewController.m in Sources */,
+				41FCEF69182EE3E100D665A5 /* MMDrawerBarButtonItem.m in Sources */,
+				41FCEF6A182EE3E100D665A5 /* MMDrawerController.m in Sources */,
 				411460A3182ABCFE0084F228 /* LabelCollectionViewCell.m in Sources */,
+				41FCEF6B182EE3E100D665A5 /* MMDrawerVisualState.m in Sources */,
 				41534C4B18270DE500B5DE62 /* FFCGAppDelegate.m in Sources */,
+				41FCEF6C182EE3E100D665A5 /* UIViewController+MMDrawerController.m in Sources */,
 				41534C7418270F7200B5DE62 /* TestViewController.m in Sources */,
 				41534C4718270DE500B5DE62 /* main.m in Sources */,
 			);
